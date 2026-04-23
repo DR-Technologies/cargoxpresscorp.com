@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro de Casillero | CargoXpress</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #1F2340;
+            --accent: #C1121F;
+            --bg: #F7F8FA;
+            --text: #0F172A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, .9);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            border-color: var(--brand);
+        }
+
+        .btn-brand:hover {
+            filter: brightness(.95);
+        }
+
+        .card {
+            border: 1px solid rgba(15, 23, 42, .08);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
+        }
+
+        .section {
+            padding: 56px 0;
+        }
+
+        .muted {
+            color: rgba(15, 23, 42, .7);
+        }
+
+        /* WhatsApp floating */
+        .wa-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 9999;
+            width: 54px;
+            height: 54px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            box-shadow: 0 12px 30px rgba(2, 6, 23, .25);
+        }
+    </style>
+
+    <!-- Zoho form styles -->
+    <link rel="stylesheet" href="assets/zoho-form.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="index.html">
+                <img src="images/logo_transparent.png" alt="CargoXpress" height="34">
+                <span class="d-none d-sm-inline">CargoXpress</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html#como">Cómo funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-brand text-white px-3" href="/registro.html">Registrar casillero</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="fw-bold mb-2">Registro de Casillero Virtual</h1>
+                    <p class="muted mb-0">
+                        Completa el formulario para crear tu casillero.
+                    </p>
+                    <!-- <p>Si el formulario no carga dentro de la página, puedes abrirlo en una pestaña nueva.</p> -->
+                </div>
+                <div class="col-lg-4 d-flex gap-2 justify-content-lg-end flex-wrap">
+                    <!--           <a class="btn btn-outline-secondary"
+             href="https://cargoxpressworldcorp.zcrmportals.com/crm/WebFormServeServlet?rid=c6fa15d3e12ca3421aebe195dcc10470f0f24005e830abea940eb374d2205949ec32093ae98f8386d0fc749eb0fb5baagid8545faa0e08912e230d68a7b27702538722ea1ee9fbcbbb4b3c511a059606dde"
+             target="_blank" rel="noopener">
+            Abrir en pestaña nueva
+          </a> -->
+                    <a class="btn btn-success"
+                        href="https://wa.me/17863022624?text=Hola%2C%20necesito%20ayuda%20para%20registrar%20mi%20casillero%20virtual."
+                        target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp me-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="card p-0 mt-4 overflow-hidden">
+                <div id='crmWebToEntityForm' class='zcwf_lblLeft main crmWebToEntityForm' style='max-width: 800px;'>
+<input type='text' style='display:none;' name='c_Zm9ybVR5cGU='
+        value='51421f8a66258a01d942472f3fc32e96e7d4edb79c383f2fc845c288abae9e5b'></input>
+    <input type='text' style='display:none;' name='c_dXNlclR5cGVJZA=='
+        value='9945af7ad76bcb1b4e53e6ffa60df505a7a04f6e5acfcbf140f3265df550d0a39a99d1fbcb9cf251b9ad35200e41846a'></input>
+    <form id='signupform' name=signupform method='POST' onSubmit='javascript:document.charset="UTF-8"'>
+        <input type='text' style='display:none;' name='c_xnQsjsdp'
+            value='26b0f108c23c6a0804035c52400a52236f0cf15835f172567b881e55514dc67f'></input>
+        <input type='hidden' name='c_zc_gad' id='zc_gad' value=''></input>
+        <input type='text' style='display:none;' name='c_xmIwtLD'
+            value='493a75de338ce1fd49c64d9a2120872546f703651422b66f1360fc6b9dc1ab88545b8f8769acec505dcc27886832dfeb'></input>
+        <input type='text' style='display:none;' name='c_actionType' value='Q29udGFjdHM='></input>
+        <input type='text' style='display:none;' name='c_returnURL'
+            value='https://crm.cargoxpresscorp.com/portal/CargoXpressWorldCorp/crm/Index.do?type=activation'> </input>
+        
+
+        <section class='signupcontainer'>
+            <div class='zcwf_title' style='max-width: 800px;'>Registrar Casillero
+            </div>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='CONTACTCF110'>Crear Casillero Virtual</label></div>
+                        <div class='zcwf_col_fld'><input type='checkbox' aria-checked='false' class='zcwf_ckbox'
+                                checked='true' id='CONTACTCF110' aria-required='false' aria-label='c_CONTACTCF110'
+                                name='c_CONTACTCF110' aria-valuemax='3' maxlength='3'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='First_Name'>Nombre<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='First_Name' aria-required='true'
+                                aria-label='c_First_Name' name='c_First_Name' aria-valuemax='40' maxlength='40'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Last_Name'>Apellidos<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Last_Name' aria-required='true'
+                                aria-label='c_Last_Name' name='c_Last_Name' aria-valuemax='80' maxlength='80'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class='za-email-container'>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label for='Email'>Correo
+                                electrónico<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email'
+                                aria-required='true' aria-label='email' name='email' aria-valuemax='100'
+                                crmlabel='c_Email' maxlength='100'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Phone'>Teléfono<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Phone' aria-required='true'
+                                aria-label='c_Phone' name='c_Phone' aria-valuemax='50' maxlength='50'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Mailing_Street'>Domicilio para correspondencia<span
+                                    style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'><input type='text' id='Mailing_Street' aria-required='true'
+                                aria-label='c_Mailing_Street' name='c_Mailing_Street' aria-valuemax='250'
+                                maxlength='250'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Mailing_City'>Ciudad para correspondencia<span style='color:red;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'><input type='text' id='Mailing_City' aria-required='true'
+                                aria-label='c_Mailing_City' name='c_Mailing_City' aria-valuemax='100'
+                                maxlength='100'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Mailing_Country'>País para correspondencia<span style='color:red;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'><input type='text' id='Mailing_Country' aria-required='true'
+                                aria-label='c_Mailing_Country' name='c_Mailing_Country' aria-valuemax='100'
+                                maxlength='100'></input>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class='za-password-container'>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Password'>Contraseña<span style='color:red;'>*</span></label></div>
+                        <div class='zcwf_col_fld'>
+                            <div class='zcwf_password_div'>
+                                <div class='zcwf_eye hiddenMode' id='show-hide-password' onclick='showHidePassword()'>
+                                </div><input type='password' id='password' name='password' />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </dd>
+            </dl>
+            <dl class='za-repassword-container'>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'><label
+                                for='Confirm Password'>Confirmar contraseña<span style='color:red;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <div class='zcwf_password_div'><input type='password' name='repassword' /></div>
+
+
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class='za-captcha-container' style='position:relative;'>
+                <dd>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:16px; font-family: Arial;'>
+                            <label for='Captcha'>Introduzca el captcha<span style='color:red;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'><input type='text' name='captcha' maxlength='10' class='form-input'
+                                id='captchafield' autocomplete='off'> </div>
+                    </div>
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab'></div>
+                        <div class='zcwf_col_fld'>
+
+                            <div class='form-input' style='text-align:left'>
+                                <div class='captcha_container'>
+                                    <img class='za-captcha'><input type='hidden' name='cdigest' value=''>
+                                    <a class='za-refresh-captcha' href='javascript:;'
+                                        onclick='changeHip(document.signupform)'>Recargar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <div class='zcwf_row'>
+                <div class='zcwf_col_lab'></div>
+                <div class='zcwf_col_fld'><input type='submit' id='formsubmit' role='button'
+                        class='formsubmit zcwf_button' value='Registrar' aria-label='Registrar' title='Registrar'><input
+                        type='reset' class='zcwf_button' role='button' name='reset' value='Restablecer'
+                        aria-label='Restablecer' title='Restablecer'></div>
+            </div>
+            <div class='zcwf_row' id='form_sub_err' style='display:none;'>
+                <div class='zcwf_col_lab'></div>
+                <div class='zcwf_col_fld'>
+                    <div class='zcwf_form_err'><span class='zcwf_disableIcon'></span><span>Form Submission
+                            Failed!</span></div>
+                </div>
+            </div>
+        </section>
+        <section class='signupotpcontainer' style='display:none'>
+            <table class='zcwf_otp_table' cellpadding='0' cellspacing='0' border='0' width='100%'>
+                <tr>
+                    <td>
+
+                        <table cellpadding='0' cellspacing='0' border='0' class='aligncenter' width='600'
+                            style='width: 525px;'>
+                            <!--tr>
+            <td style='padding: 10px 15px;'>
+				
+			</td>
+        </tr-->
+
+                            <tr>
+                                <td>
+                                    <div class='zcwf_acWrapper'>
+
+                                        <table cellpadding='0' cellspacing='0' border='0' width='100%'
+                                            style='padding-bottom: 10px;'>
+                                            <tr>
+                                                <td class='aligncenter'>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <p class='zcwf_head' data-zcqa='account_confirmation'>Confirmación de la cuenta
+                                        </p>
+
+                                        <p class='zcwf_verifytxt' data-zcqa='confirmation_text'>Para verificar su
+                                            registro, le hemos enviado una contraseña de un solo uso (OTP) a su
+                                            dirección de correo electrónico <b id='mobileotp'></b>
+                                            <a href='#' class='zcwf_otplink' data-zcqa='change_email'
+                                                onclick='gobacktosignup();changeBackground("#ffff");'> Cambiar dirección
+                                                de correo electrónico</a>
+                                        </p>
+
+
+                                        <p class='zcwf_otp-input-ctn'>
+                                            <input type='text' class='cPT_input' data-zcqa='otp_box1'
+                                                oninput='nextField(this);' maxlength='1'>
+                                            <input type='text' class='cPT_input' data-zcqa='otp_box2'
+                                                oninput='nextField(this);' maxlength='1'>
+                                            <input type='text' class='cPT_input' data-zcqa='otp_box3'
+                                                oninput='nextField(this);' maxlength='1'>
+                                            <input type='text' class='cPT_input' oninput='nextField(this);'
+                                                data-zcqa='otp_box4' maxlength='1'>
+                                            <input type='text' class='cPT_input' data-zcqa='otp_box5'
+                                                oninput='nextField(this);' maxlength='1'>
+                                            <input type='text' data-zcqa='otp_box6' class='cPT_input'
+                                                oninput='nextField(this);' maxlength='1'>
+                                            <input type='text' class='cPT_input' data-zcqa='otp_box7'
+                                                oninput='nextField(this);' maxlength='1'>
+                                        </p>
+                                        <dl class='za-otp-container'>
+                                            <dd class='field-error'>
+                                                <input type='hidden' class='form-input' name='otp' id='otpfield'
+                                                    placeholder='Enter OTP'><span
+                                                    onclick='removeResendClass(); resendOTP()' id='resendotp'
+                                                    data-zcqa='resendotp' class='resendotp resend_timer'>Reenviar
+                                                    OTP</span>
+                                            </dd>
+                                        </dl>
+                                        <div class='zcwf_otpfooter'> <input type='button'
+                                                value='Verificar y registrarse' onclick='populateOtpValue();'
+                                                name='otpfield' data-zcqa='verifybtn' class='zcwf_verifybtn' /></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <div class='pf_loaderWrap' id='signup-loader'>
+            <div class='pf_loaderCtn'>
+                <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='lds-spin'
+                    width='76px' height='76px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'
+                    style='background: none;'>
+                    <g transform='translate(70,50)'>
+                        <g transform='rotate(0)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='1' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.875s'
+                                    values='1 1;1 1' keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.875s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(64.14213562373095,64.14213562373095)'>
+                        <g transform='rotate(45)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.875' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.75s' values='1 1;1 1'
+                                    keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.75s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(50,70)'>
+                        <g transform='rotate(90)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.75' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.625s'
+                                    values='1 1;1 1' keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.625s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(35.85786437626905,64.14213562373095)'>
+                        <g transform='rotate(135)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.625' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.5s' values='1 1;1 1'
+                                    keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.5s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(30,50)'>
+                        <g transform='rotate(180)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.5' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.375s'
+                                    values='1 1;1 1' keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.375s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(35.85786437626905,35.85786437626905)'>
+                        <g transform='rotate(225)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.375' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.25s' values='1 1;1 1'
+                                    keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.25s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(49.99999999999999,30)'>
+                        <g transform='rotate(270)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.25' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='-0.125s'
+                                    values='1 1;1 1' keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='-0.125s' />
+                            </circle>
+                        </g>
+                    </g>
+                    <g transform='translate(64.14213562373095,35.85786437626905)'>
+                        <g transform='rotate(315)'>
+                            <circle cx='0' cy='0' r='5' fill='#000000' fill-opacity='0.125' transform='scale(1 1)'>
+                                <animateTransform attributeName='transform' type='scale' begin='0s' values='1 1;1 1'
+                                    keyTimes='0;1' dur='1s' repeatCount='indefinite' />
+                                <animate attributeName='fill-opacity' keyTimes='0;1' dur='1s' repeatCount='indefinite'
+                                    values='1;0' begin='0s' />
+                            </circle>
+                        </g>
+                    </g>
+                </svg>
+                <div class='pf_ctn' data-zcqa='verification_text'>La verificación está en curso</div>
+            </div>
+        </div>
+        
+        <!-- Do not remove this --- Analytics Tracking code starts -->
+        <script id='wf_anal'
+            src='https://crm.cargoxpresscorp.com/crm/WebFormAnalyticsServeServlet?rid=3a4cea170d5c3b9c9027a50d0e62f4948f17352bfc6472273bf3ca3f9ba47b3bd526b34e67fdae12060fd48b1035c387gid307cbc6bcb5af62aef6b7476573923506f13d1bb981e1af45aa1fb9da00f29f8gidcb0f89df32c9db5a6f1734ff17c8df4f92da728821059ef2598ab519db25c7b3gid0c7ae3cb0f5f957d03d301c39709974b1e6ef48ae9cf0e1970da2d0a84f4b51e&tw=a08cef43e41e635003b9c5075c9b7ba086fb1e4d08cdaa03658836bfd8f2cb22'></script>
+        <!-- Do not remove this --- Analytics Tracking code ends. -->
+    </form>
+    <!-- Do not remove this code. -->
+    <iframe name='captchaFrame' style='display:none;'></iframe>
+</div>
+
+                <!-- <div class="small muted mt-3">
+          Si ves el formulario en blanco o cortado, usa “Abrir en pestaña nueva”.
+        </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top bg-white">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <div class="small muted">© 2026 CargoXpress World Corp. Todos los derechos reservados.</div>
+            <div class="small muted">info@cargoxpressworldcorp.com · +1 786 302 2624</div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp floating -->
+    <a class="wa-float" target="_blank" rel="noopener"
+        href="https://wa.me/17863022624?text=Hola%2C%20quiero%20registrar%20mi%20casillero%20virtual."
+        aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-3"></i>
+    </a>
+
+    
+    <!-- Zoho form dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
+    <script src="assets/zoho-form.js"></script>
+    <script
+    src='https://crm.cargoxpresscorp.com/accounts/p/10096311796/register/script?mode=21&servicename=ZohoCRM&serviceurl=https://crm.cargoxpresscorp.com/portal/CargoXpressWorldCorp/crm/Index.do?type=activation'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

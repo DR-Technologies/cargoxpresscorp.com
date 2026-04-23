@@ -1,0 +1,293 @@
+html,
+body {
+    margin: 0;
+}
+
+/* Contenedor general del form: mantener box model y ancho */
+#crmWebToEntityForm.zcwf_lblLeft {
+    width: 100%;
+    padding: 25px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#crmWebToEntityForm.zcwf_lblLeft * {
+    box-sizing: border-box;
+}
+
+#crmWebToEntityForm {
+    text-align: left;
+}
+
+#crmWebToEntityForm * {
+    direction: ltr;
+}
+
+/* Layout de filas/columnas (evita que se rompa el formulario) */
+.zcwf_lblLeft .zcwf_col_lab {
+    width: 30%;
+    word-break: break-word;
+    padding: 0 6px;
+    margin-right: 10px;
+    margin-top: 5px;
+    float: left;
+    min-height: 1px;
+}
+
+.zcwf_lblLeft .zcwf_col_fld {
+    float: left;
+    width: 68%;
+    padding: 0 6px;
+    position: relative;
+    /* requerido por mensajes de campo/errores posicionados */
+    margin-top: 5px;
+}
+
+.zcwf_lblLeft .zcwf_row {
+    margin: 15px 0;
+}
+
+/* Clearfix para filas/cols */
+.zcwf_lblLeft .zcwf_row:after,
+.zcwf_lblLeft .zcwf_col_fld:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.cBoth:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.dIB {
+    display: inline-block;
+}
+
+/* Inputs: mantener anchos (si los quitas, el layout cambia) */
+.zcwf_lblLeft .zcwf_col_fld input[type=text],
+input[type=password],
+.zcwf_lblLeft .zcwf_col_fld textarea {
+    width: 60%;
+    resize: vertical;
+    float: left;
+}
+
+/* Selects: mantener ancho/float/padding para que no colapse */
+.zcwf_lblLeft .zcwf_col_fld_slt {
+    width: 60%;
+    float: left;
+    resize: vertical;
+    padding: 2px 5px;
+}
+
+/* Ayuda: mantener el flujo/espacio para no “montarse” */
+.zcwf_lblLeft .zcwf_col_help {
+    float: left;
+    margin-left: 7px;
+    max-width: 35%;
+    word-break: break-word;
+}
+
+/* Ocultar campos (clave para hide/show) */
+.zcwf_lblLeft .wfrm_fld_dpNn {
+    display: none;
+}
+
+/* Tooltip: esto sí es interacción funcional (aparece sobre el campo) */
+.zcwf_lblLeft .zcwf_tooltip_over {
+    position: relative;
+}
+
+.zcwf_lblLeft .zcwf_tooltip_ctn {
+    position: absolute;
+    top: 3px;
+    z-index: 100;
+    min-width: 100px;
+    max-width: 150px;
+    padding: 3px 6px;
+    word-break: break-word;
+}
+
+/* Checkbox/file: mantener medidas/float para layout */
+.zcwf_lblLeft .zcwf_ckbox {
+    float: left;
+}
+
+.zcwf_lblLeft .zcwf_file {
+    width: 55%;
+    box-sizing: border-box;
+    float: left;
+}
+
+/* Mensajes de error: display/posición es funcional */
+.zcwf_lblLeft .error,
+.jqval-error,
+.pwderror {
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+}
+
+.field-msg {
+    position: absolute;
+    top: inherit;
+    bottom: -17px;
+}
+
+.field-error {
+    margin-bottom: 15px;
+}
+
+.field-msg .error {
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+/* OTP: algunos contenedores requieren posición para errores */
+.za-otp-container .field-msg {
+    position: static;
+    top: auto;
+}
+
+.za-otp-container {
+    margin-bottom: 0;
+}
+
+.za-otp-container .field-error {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.zcwf_otp-input-ctn .field-msg {
+    position: absolute;
+}
+
+.zcwf_otp-input-ctn .error {
+    margin: 0;
+}
+
+/* OTP inputs: mantener tamaño y foco visible (interacción) */
+.cPT_input {
+    width: 36px;
+    height: 38px;
+    padding: 3px;
+    text-align: center;
+    margin-right: 2px;
+    outline: none;
+}
+
+.cPT_input:focus {
+    /* Mantener un indicador de foco sin “estética” dependiente de color */
+    outline: 2px solid currentColor;
+    outline-offset: 1px;
+}
+
+.zcwf_otp-input-ctn {
+    text-align: center;
+    margin: 0;
+}
+
+/* “Resend OTP” y estados clicables: pointer-events es funcional */
+.za-refresh-captcha {
+    display: block;
+}
+
+.resendotp {
+    cursor: pointer;
+}
+
+.resendotp.nonclickelem {
+    pointer-events: none;
+}
+
+/* Password eye + modo oculto: posición/clickable es funcional */
+.zcwf_lblLeft .zcwf_password_div {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+}
+
+.zcwf_lblLeft .zcwf_password_div input[type=text],
+input[type=password] {
+    width: 100% !important;
+    padding-right: 20px;
+}
+
+.zcwf_lblLeft .zcwf_eye {
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    top: 4px;
+    cursor: pointer;
+    width: 11px;
+    height: 11px;
+}
+
+/* Mantener pseudo-elementos si el script/UX depende del “ojo” (aunque sea visual) */
+.zcwf_lblLeft .zcwf_eye:before,
+.zcwf_lblLeft .hiddenMode:before {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+/* Política/privacidad: flex afecta interacción/orden visual */
+.zcwf_policyCont {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.zcwf_lblLeft .zcwf_privacy {
+    padding: 6px;
+}
+
+/* Loader overlay: display none + fixed + z-index es funcional */
+.pf_loaderWrap {
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    position: fixed;
+    overflow: auto;
+    display: none;
+}
+
+/* Errores de formulario: display/flow es funcional */
+.zcwf_form_err {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Captcha: borde no es “funcional” estrictamente, pero a veces delimita área clic/visual.
+   Si quieres, esto se puede eliminar también sin romper funcionamiento. */
+.za-captcha {
+    border: 1px solid #ccc;
+}
+
+/* Logo: mantener que no haya bordes/altura extra si el layout lo depende */
+.zcwf_lblLeft#crmWebToEntityForm #compLogo {
+    border: none;
+    min-height: auto;
+    text-align: left;
+}
+
+/* Responsive: clave para que en móvil no se rompa */
+@media all and (max-width: 800px) {
+
+    .zcwf_lblLeft .zcwf_col_lab,
+    .zcwf_lblLeft .zcwf_col_fld {
+        width: auto;
+        float: none !important;
+    }
+
+    .zcwf_lblLeft .zcwf_col_help {
+        width: 40%;
+    }
+}
