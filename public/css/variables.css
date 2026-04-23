@@ -1,0 +1,12 @@
+:root {
+    --brand: #1F2340;
+    --accent: #C1121F;
+    --bg: #F7F8FA;
+    --text: #0F172A;
+    --button-color: var(--brand);
+    --highlight-text: var(--brand);
+    --hero-background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(31, 35, 64, .18), transparent),
+        radial-gradient(900px 500px at 90% 20%, rgba(193, 18, 31, .12), transparent),
+        #fff;
+}

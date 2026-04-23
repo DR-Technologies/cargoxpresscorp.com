@@ -15,102 +15,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --brand: #1F2340;
-            --accent: #C1121F;
-            --bg: #F7F8FA;
-            --text: #0F172A;
-        }
-
-        body {
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, .9);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-brand {
-            background: var(--brand);
-            border-color: var(--brand);
-        }
-
-        .btn-brand:hover {
-            filter: brightness(.35);
-            background: #171B3355;
-            /* un tono un poco más oscuro que tu brand */
-        }
-
-        .hero {
-            background: radial-gradient(1200px 600px at 20% 10%, rgba(31, 35, 64, .18), transparent),
-                radial-gradient(900px 500px at 90% 20%, rgba(193, 18, 31, .12), transparent),
-                #fff;
-            border-bottom: 1px solid rgba(15, 23, 42, .08);
-        }
-
-        .card {
-            border: 1px solid rgba(15, 23, 42, .08);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
-        }
-
-        .feature-card {
-            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-            cursor: default;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(2, 6, 23, .12);
-            border-color: rgba(31, 35, 64, .11);
-        }
-
-        .section {
-            padding: 72px 0;
-        }
-
-        .badge-soft {
-            background: rgba(31, 35, 64, .08);
-            color: var(--brand);
-            border: 1px solid rgba(31, 35, 64, .12);
-        }
-
-        .wa-float {
-            position: fixed;
-            right: 18px;
-            bottom: 18px;
-            z-index: 9999;
-            width: 54px;
-            height: 54px;
-            border-radius: 999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #25D366;
-            color: white;
-            box-shadow: 0 12px 30px rgba(2, 6, 23, .25);
-        }
-
-        .wa-float:hover {
-            transform: translateY(-1px);
-        }
-
-        .muted {
-            color: rgba(15, 23, 42, .7);
-        }
-    </style>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg sticky-top border-bottom">
         <div class="container">
-            <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="#">
-                <img src="images/logo.jpg" alt="CargoXpress" height="34">
-                <span class="d-none d-sm-inline">CargoXpress</span>
+            <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" data-link="navbar.brandLink" href="#">
+                <img data-image="branding.logo" src="images/logo.jpg" alt="CargoXpress" height="34">
+                <span class="d-none d-sm-inline" data-text="navbar.brandName">CargoXpress</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -118,242 +32,159 @@
             </button>
 
             <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="#como">Cómo Funciona</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-brand text-white px-3" href="https://zcform.com/faNBw" target="_blank" rel="noopener">
-                            Registrar Casillero
-                        </a>
-                    </li>
-                </ul>
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2" data-nav-items></ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="container py-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Envíos Internacionales</span>
-                    <h1 class="display-5 fw-bold lh-sm">Tu Casillero en USA para Comprar en Cualquier Tienda y Recibir
-                        en tu Ciudad</h1>
-                    <p class="lead muted mt-3 mb-4">
-                        Compra en Amazon, eBay, Shein y más. Te damos una dirección en EE.UU. y enviamos tus compras a
-                        tu puerta, rápido y seguro.
-                    </p>
+    <main data-layout-root>
+        <header class="hero" data-section="hero">
+            <div class="container py-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge badge-soft rounded-pill px-3 py-2 mb-3" data-text="hero.badge">Envíos Internacionales</span>
+                        <h1 class="display-5 fw-bold lh-sm" data-text="hero.title">Tu Casillero en USA para Comprar en Cualquier Tienda y Recibir en tu Ciudad</h1>
+                        <p class="lead muted mt-3 mb-4" data-text="hero.subtitle">
+                            Compra en Amazon, eBay, Shein y más. Te damos una dirección en EE.UU. y enviamos tus compras a tu puerta, rápido y seguro.
+                        </p>
 
-                    <div class="d-flex gap-2 flex-wrap">
-                        <a class="btn btn-brand text-white btn-lg px-4" target="_blank" rel="noopener"
-                            href="https://zcform.com/faNBw">
-                            Registrar Casillero
-                        </a>
-                        <a class="btn btn-outline-secondary btn-lg px-4" href="#como">Ver cómo Funciona</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="card p-4">
-                        <div class="d-flex align-items-start gap-3">
-                            <div class="fs-3"><i class="bi bi-whatsapp"></i></div>
-                            <div>
-                                <div class="fw-semibold">Escríbenos por WhatsApp</div>
-                                <div class="muted">Respuesta Rápida</div>
-                            </div>
-                        </div>
-
-                        <a class="btn btn-success w-100 mt-3"
-                            href="https://wa.me/17863022624?text=Hola%2C%20quiero%20registrar%20mi%20casillero%20virtual."
-                            target="_blank" rel="noopener">
-                            <i class="bi bi-whatsapp me-2"></i> +1 786 302 2624
-                        </a>
-
-                        <hr class="my-4">
-
-                        <div class="row g-3 text-center">
-                            <div class="col-4">
-                                <div class="h4 fw-bold mb-0">1M+</div>
-                                <div class="small muted">Paquetes</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="h4 fw-bold mb-0">5000+</div>
-                                <div class="small muted">Clientes</div>
-                            </div>
-                            <div class="col-4">
-                                <div class="h4 fw-bold mb-0">10+</div>
-                                <div class="small muted">Años</div>
-                            </div>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a class="btn btn-brand text-white btn-lg px-4" data-link="hero.primaryCta.url" data-text="hero.primaryCta.label" target="_blank" rel="noopener" href="https://zcform.com/faNBw">
+                                Registrar Casillero
+                            </a>
+                            <a class="btn btn-outline-secondary btn-lg px-4" data-link="hero.secondaryCta.url" data-text="hero.secondaryCta.label" href="#como">Ver cómo Funciona</a>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </header>
+                    <div class="col-lg-5">
+                        <div class="card p-4">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="fs-3"><i class="bi bi-whatsapp"></i></div>
+                                <div>
+                                    <div class="fw-semibold" data-text="hero.contactCard.title">Escríbenos por WhatsApp</div>
+                                    <div class="muted" data-text="hero.contactCard.subtitle">Respuesta Rápida</div>
+                                </div>
+                            </div>
 
-    <!-- CÓMO -->
-    <section id="como" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Cómo Funciona</h2>
-                <p class="muted mb-0">En 3 pasos simples</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 feature-card">
-                        <div class="fs-2 mb-2"><i class="bi bi-person-check"></i></div>
-                        <h5 class="fw-semibold">1) Regístrate</h5>
-                        <p class="muted mb-0">Obtén tu dirección de casillero en EE.UU. en minutos.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 feature-card">
-                        <div class="fs-2 mb-2"><i class="bi bi-bag-check"></i></div>
-                        <h5 class="fw-semibold">2) Compra</h5>
-                        <p class="muted mb-0">Usa tu dirección para recibir paquetes en EE.UU.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4 h-100 feature-card">
-                        <div class="fs-2 mb-2"><i class="bi bi-truck"></i></div>
-                        <h5 class="fw-semibold">3) Recibe</h5>
-                        <p class="muted mb-0">Envío internacional rápido y seguro hasta tu puerta.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5">
-                <p class="muted mb-0">Ahorra en Envíos y Consolida Múltiples Compras</p>
-            </div>
-            <div class="text-center mt-5">
-                <a class="btn btn-brand text-white btn-lg px-4" target="_blank" rel="noopener" href="https://zcform.com/faNBw">
-                    Registrar Casillero
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section id="beneficios" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Beneficios</h2>
-            </div>
-            <div class="row g-4 align-items-stretch">
-                <div class="col-lg-7">
-                    <div class="card p-4 h-100">
-                        <h2 class="fw-bold mb-3">Beneficios de usar CargoXpress</h2>
-                        <ul class="list-unstyled mb-0">
-                            <li class="d-flex gap-3 py-2"><i
-                                    class="bi bi-check2-circle text-success"></i><span><b>Ahorro en envíos:</b>
-                                    consolida y paga menos.</span></li>
-                            <li class="d-flex gap-3 py-2"><i
-                                    class="bi bi-check2-circle text-success"></i><span><b>Compras sin fronteras:</b>
-                                    compra en cualquier tienda en EE.UU.</span></li>
-                            <li class="d-flex gap-3 py-2"><i
-                                    class="bi bi-check2-circle text-success"></i><span><b>Rápido y seguro:</b> tiempos
-                                    de entrega optimizados.</span></li>
-                            <li class="d-flex gap-3 py-2"><i
-                                    class="bi bi-check2-circle text-success"></i><span><b>Seguimiento:</b> control de tu
-                                    envío desde almacén hasta entrega.</span></li>
-                            <li class="d-flex gap-3 py-2"><i
-                                    class="bi bi-check2-circle text-success"></i><span><b>Atención personalizada:</b>
-                                    acompañamiento en cada paso.</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="card p-0 h-100 overflow-hidden">
-                        <img src="images/beneficios.jpg" alt="CargoXpress - Envíos internacionales"
-                            class="w-100 h-100 object-fit-cover" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Contacto</h2>
-                <p class="muted mb-0">Escríbenos por WhatsApp o envíanos un correo. Respondemos rápido.</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-7">
-                    <div class="card p-4 h-100">
-                        <h5 class="fw-semibold mb-3">Atención</h5>
-
-                        <div class="d-flex flex-column gap-2">
-                            <a class="btn btn-success btn-lg"
-                                href="https://wa.me/17863022624?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20casillero%20virtual."
-                                target="_blank" rel="noopener">
-                                <i class="bi bi-whatsapp me-2"></i> WhatsApp: +1 786 302 2624
+                            <a class="btn btn-success w-100 mt-3" data-link="hero.contactCard.button.url" target="_blank" rel="noopener" href="https://wa.me/17863022624?text=Hola%2C%20quiero%20registrar%20mi%20casillero%20virtual.">
+                                <i class="bi bi-whatsapp me-2"></i><span data-text="hero.contactCard.button.label">+1 786 302 2624</span>
                             </a>
 
-                            <a class="btn btn-outline-secondary" href="mailto:info@cargoxpressworldcorp.com">
-                                <i class="bi bi-envelope me-2"></i> Info@cargoxpresscorp.com
-                            </a>
+                            <hr class="my-4">
 
-                            <a class="btn btn-outline-secondary" href="tel:+17863022624">
-                                <i class="bi bi-telephone me-2"></i> Llamar: +1 786 797 3840
-                            </a>
-                        </div>
-
-                        <hr class="my-4">
-
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="small muted">Horario</div>
-                                <div class="fw-semibold">Lun–Vie: 9:00am – 5:30pm</div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="small muted">Soporte</div>
-                                <div class="fw-semibold">Respuesta por WhatsApp</div>
-                                <div class="muted small">Para cotizaciones y registro de casillero.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="card p-4 h-100">
-                        <h5 class="fw-semibold mb-3">Registrar Casillero</h5>
-                        <p class="muted">Completa el formulario para crear tu casillero virtual.</p>
-
-                        <a class="btn btn-brand text-white btn-lg w-100" href="https://zcform.com/faNBw" target="_blank"
-                            rel="noopener">
-                            Ir al formulario
-                        </a>
-
-                        <div class="small muted mt-3">
-                            Si prefieres, escríbenos por WhatsApp y te guiamos.
+                            <div class="row g-3 text-center" data-hero-stats></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <footer class="py-4 border-top bg-white">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <div class="small muted">© 2026 CargoXpress World Corp. Todos los derechos reservados.</div>
-            <div class="small muted">Envíos Internacionales · Casillero USA</div>
-        </div>
-    </footer>
+        <section id="como" class="section" data-section="como">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold" data-text="howItWorks.heading">Cómo Funciona</h2>
+                    <p class="muted mb-0" data-text="howItWorks.subheading">En 3 pasos simples</p>
+                </div>
 
-    <!-- WhatsApp floating -->
-    <a class="wa-float" target="_blank" rel="noopener"
-        href="https://wa.me/17863022624?text=Hola%2C%20quiero%20registrar%20mi%20casillero%20virtual."
-        aria-label="WhatsApp">
+                <div class="row g-4" data-how-steps></div>
+
+                <div class="text-center mt-5">
+                    <p class="muted mb-0" data-text="howItWorks.note">Ahorra en Envíos y Consolida Múltiples Compras</p>
+                </div>
+                <div class="text-center mt-5">
+                    <a class="btn btn-brand text-white btn-lg px-4" data-link="howItWorks.cta.url" data-text="howItWorks.cta.label" target="_blank" rel="noopener" href="https://zcform.com/faNBw">
+                        Registrar Casillero
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="section" data-section="beneficios">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold" data-text="benefits.heading">Beneficios</h2>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="card p-4 h-100">
+                            <h2 class="fw-bold mb-3" data-text="benefits.title">Beneficios de usar CargoXpress</h2>
+                            <ul class="list-unstyled mb-0" data-benefit-items></ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card p-0 h-100 overflow-hidden">
+                            <img data-image="benefits.image" src="images/beneficios.jpg" alt="CargoXpress - Envíos internacionales" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" data-section="contact">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold" data-text="contact.heading">Contacto</h2>
+                    <p class="muted mb-0" data-text="contact.subheading">Escríbenos por WhatsApp o envíanos un correo. Respondemos rápido.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card p-4 h-100">
+                            <h5 class="fw-semibold mb-3" data-text="contact.attentionTitle">Atención</h5>
+
+                            <div class="d-flex flex-column gap-2" data-contact-actions></div>
+
+                            <hr class="my-4">
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="small muted" data-text="contact.schedule.label">Horario</div>
+                                    <div class="fw-semibold" data-text="contact.schedule.value">Lun–Vie: 9:00am – 5:30pm</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="small muted" data-text="contact.support.label">Soporte</div>
+                                    <div class="fw-semibold" data-text="contact.support.value">Respuesta por WhatsApp</div>
+                                    <div class="muted small" data-text="contact.support.note">Para cotizaciones y registro de casillero.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card p-4 h-100">
+                            <h5 class="fw-semibold mb-3" data-text="contact.registerCard.title">Registrar Casillero</h5>
+                            <p class="muted" data-text="contact.registerCard.description">Completa el formulario para crear tu casillero virtual.</p>
+
+                            <a class="btn btn-brand text-white btn-lg w-100" data-link="contact.registerCard.cta.url" data-text="contact.registerCard.cta.label" href="https://zcform.com/faNBw" target="_blank" rel="noopener">
+                                Ir al formulario
+                            </a>
+
+                            <div class="small muted mt-3" data-text="contact.registerCard.note">
+                                Si prefieres, escríbenos por WhatsApp y te guiamos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-4 border-top bg-white" data-section="footer">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <div class="small muted" data-text="footer.copy">© 2026 CargoXpress World Corp. Todos los derechos reservados.</div>
+                <div class="small muted" data-text="footer.tagline">Envíos Internacionales · Casillero USA</div>
+            </div>
+        </footer>
+    </main>
+
+    <a class="wa-float" data-link="floatingWhatsapp.url" target="_blank" rel="noopener" href="https://wa.me/17863022624?text=Hola%2C%20quiero%20registrar%20mi%20casillero%20virtual." aria-label="WhatsApp">
         <i class="bi bi-whatsapp fs-3"></i>
     </a>
 
+    <script src="js/content-model.js"></script>
+    <script src="js/dom-hooks.js"></script>
+    <script src="js/public-render.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
