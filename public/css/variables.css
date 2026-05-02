@@ -3,8 +3,19 @@
     --accent: #C1121F;
     --bg: #F7F8FA;
     --text: #0F172A;
+    --muted-text: rgba(15, 23, 42, .7);
     --button-color: var(--brand);
+    --button-text: #fff;
     --highlight-text: var(--brand);
+    --navbar-background: rgba(255, 255, 255, .9);
+    --navbar-brand-text: #000;
+    --navbar-link-text: rgba(0, 0, 0, .65);
+    --card-background: #fff;
+    --section-one-background: transparent;
+    --section-two-background: transparent;
+    --section-three-background: transparent;
+    --footer-background: #fff;
+    --footer-text: rgba(15, 23, 42, .7);
     --hero-background:
         radial-gradient(1200px 600px at 20% 10%, rgba(31, 35, 64, .18), transparent),
         radial-gradient(900px 500px at 90% 20%, rgba(193, 18, 31, .12), transparent),

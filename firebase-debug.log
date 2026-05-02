@@ -1,0 +1,66 @@
+[debug] [2026-05-02T17:57:37.046Z] ----------------------------------------------------------------------
+[debug] [2026-05-02T17:57:37.046Z] ----------------------------------------------------------------------
+[debug] [2026-05-02T17:57:37.053Z] Command:       /opt/homebrew/Cellar/node/23.9.0/bin/node /opt/homebrew/bin/firebase database:get /sitePublished/current --output /tmp/cargoxpress-sitePublished-current-cli.json
+[debug] [2026-05-02T17:57:37.053Z] CLI Version:   15.15.0
+[debug] [2026-05-02T17:57:37.053Z] Platform:      darwin
+[debug] [2026-05-02T17:57:37.054Z] Node Version:  v23.9.0
+[debug] [2026-05-02T17:57:37.054Z] Time:          Sat May 02 2026 12:57:37 GMT-0500 (Colombia Standard Time)
+[debug] [2026-05-02T17:57:37.054Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-02T17:57:37.989Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-02T17:57:37.990Z] > authorizing via signed-in user (rafaeldonado@sqldr.com)
+[debug] [2026-05-02T17:57:37.991Z] [iam] checking project cargoxpresscorp for permissions ["firebase.projects.get","firebasedatabase.instances.get"]
+[debug] [2026-05-02T17:57:37.991Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:37.991Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:37.992Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions [none]
+[debug] [2026-05-02T17:57:37.992Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions  x-goog-user-project=cargoxpresscorp
+[debug] [2026-05-02T17:57:37.992Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-05-02T17:57:37.053Z] Command:       /opt/homebrew/Cellar/node/23.9.0/bin/node /opt/homebrew/bin/firebase database:get /siteDraft/current --output /tmp/cargoxpress-siteDraft-current-cli.json
+[debug] [2026-05-02T17:57:37.053Z] CLI Version:   15.15.0
+[debug] [2026-05-02T17:57:37.053Z] Platform:      darwin
+[debug] [2026-05-02T17:57:37.053Z] Node Version:  v23.9.0
+[debug] [2026-05-02T17:57:37.054Z] Time:          Sat May 02 2026 12:57:37 GMT-0500 (Colombia Standard Time)
+[debug] [2026-05-02T17:57:37.054Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-02T17:57:37.992Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-02T17:57:37.993Z] > authorizing via signed-in user (rafaeldonado@sqldr.com)
+[debug] [2026-05-02T17:57:37.993Z] [iam] checking project cargoxpresscorp for permissions ["firebase.projects.get","firebasedatabase.instances.get"]
+[debug] [2026-05-02T17:57:37.994Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:37.994Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:37.994Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions [none]
+[debug] [2026-05-02T17:57:37.994Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions  x-goog-user-project=cargoxpresscorp
+[debug] [2026-05-02T17:57:37.994Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-05-02T17:57:38.980Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions 200
+[debug] [2026-05-02T17:57:38.981Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-05-02T17:57:38.982Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:38.982Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:38.983Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp [none]
+[debug] [2026-05-02T17:57:39.010Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions 200
+[debug] [2026-05-02T17:57:39.011Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cargoxpresscorp:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-05-02T17:57:39.011Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.011Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.012Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp [none]
+[debug] [2026-05-02T17:57:39.484Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp 200
+[debug] [2026-05-02T17:57:39.484Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp {"projectId":"cargoxpresscorp","projectNumber":"628613386852","displayName":"cargoxpresscorp","name":"projects/cargoxpresscorp","resources":{"hostingSite":"cargoxpresscorp","realtimeDatabaseInstance":"cargoxpresscorp-default-rtdb"},"state":"ACTIVE","etag":"1_3d900e21-0f40-4aca-b031-7d3555c36b84"}
+[debug] [2026-05-02T17:57:39.485Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.485Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.485Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb [none]
+[debug] [2026-05-02T17:57:39.829Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp 200
+[debug] [2026-05-02T17:57:39.829Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cargoxpresscorp {"projectId":"cargoxpresscorp","projectNumber":"628613386852","displayName":"cargoxpresscorp","name":"projects/cargoxpresscorp","resources":{"hostingSite":"cargoxpresscorp","realtimeDatabaseInstance":"cargoxpresscorp-default-rtdb"},"state":"ACTIVE","etag":"1_3d900e21-0f40-4aca-b031-7d3555c36b84"}
+[debug] [2026-05-02T17:57:39.829Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.829Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:39.830Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb [none]
+[debug] [2026-05-02T17:57:40.431Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb 200
+[debug] [2026-05-02T17:57:40.431Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb {"name":"projects/628613386852/locations/us-central1/instances/cargoxpresscorp-default-rtdb","project":"projects/628613386852","databaseUrl":"https://cargoxpresscorp-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2026-05-02T17:57:40.433Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:40.434Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:40.434Z] >>> [apiv2][query] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/sitePublished/current.json 
+[debug] [2026-05-02T17:57:40.836Z] <<< [apiv2][status] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/sitePublished/current.json 200
+[debug] [2026-05-02T17:57:40.836Z] <<< [apiv2][body] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/sitePublished/current.json [stream]
+[debug] [2026-05-02T17:57:41.004Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb 200
+[debug] [2026-05-02T17:57:41.004Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/cargoxpresscorp/locations/-/instances/cargoxpresscorp-default-rtdb {"name":"projects/628613386852/locations/us-central1/instances/cargoxpresscorp-default-rtdb","project":"projects/628613386852","databaseUrl":"https://cargoxpresscorp-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2026-05-02T17:57:41.005Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:41.005Z] Checked if tokens are valid: true, expires at: 1777748167209
+[debug] [2026-05-02T17:57:41.005Z] >>> [apiv2][query] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/siteDraft/current.json 
+[debug] [2026-05-02T17:57:41.357Z] <<< [apiv2][status] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/siteDraft/current.json 200
+[debug] [2026-05-02T17:57:41.358Z] <<< [apiv2][body] GET https://cargoxpresscorp-default-rtdb.firebaseio.com/siteDraft/current.json [stream]

@@ -4,14 +4,37 @@ body {
     background: var(--bg);
 }
 
+body.site-pending {
+    opacity: 0;
+}
+
+body.site-ready,
+body.site-failed {
+    opacity: 1;
+}
+
 .navbar {
-    background: rgba(255, 255, 255, .9);
+    background: var(--navbar-background);
     backdrop-filter: blur(10px);
+}
+
+.navbar .navbar-brand {
+    color: var(--navbar-brand-text);
+}
+
+.navbar .nav-link {
+    color: var(--navbar-link-text);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--navbar-brand-text);
 }
 
 .btn-brand {
     background: var(--button-color);
     border-color: var(--button-color);
+    color: var(--button-text) !important;
 }
 
 .btn-brand:hover {
@@ -28,6 +51,7 @@ body {
     border: 1px solid rgba(15, 23, 42, .08);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(2, 6, 23, .06);
+    background: var(--card-background);
 }
 
 .feature-card {
@@ -43,6 +67,18 @@ body {
 
 .section {
     padding: 72px 0;
+}
+
+[data-section="como"] {
+    background: var(--section-one-background);
+}
+
+[data-section="beneficios"] {
+    background: var(--section-two-background);
+}
+
+[data-section="contact"] {
+    background: var(--section-three-background);
 }
 
 .badge-soft {
@@ -72,5 +108,13 @@ body {
 }
 
 .muted {
-    color: rgba(15, 23, 42, .7);
+    color: var(--muted-text);
+}
+
+footer[data-section="footer"] {
+    background: var(--footer-background) !important;
+}
+
+footer[data-section="footer"] .muted {
+    color: var(--footer-text);
 }

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CMS | By DR Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <section id="auth-screen" class="auth-screen">
+        <section id="auth-card" class="panel auth-card">
+            <div class="auth-card-head">
+                <div class="admin-brand">CMS By DR Technologies</div>
+            </div>
+            <form id="login-form" class="stack">
+                <label class="field">
+                    <span>Email</span>
+                    <input id="login-email" type="email" autocomplete="email" required>
+                </label>
+                <label class="field">
+                    <span>Contraseña</span>
+                    <input id="login-password" type="password" autocomplete="current-password" required>
+                </label>
+                <button class="button button-primary" type="submit">Iniciar sesión</button>
+            </form>
+            <p id="auth-message" class="status-text" aria-live="polite"></p>
+        </section>
+    </section>
+
+    <div id="admin-shell" class="admin-shell hidden">
+        <header class="admin-navbar">
+            <div class="admin-navbar__brand">CMS By DR Technologies</div>
+
+            <div class="admin-navbar__actions" aria-label="Acciones del CMS">
+                <div class="admin-action-cluster">
+                    <button id="save-button" class="action-button action-button--primary" type="button" disabled>
+                        <i class="bi bi-check2"></i>
+                        <span>Guardar</span>
+                    </button>
+                    <button id="publish-button" class="action-button action-button--success" type="button" disabled>
+                        <i class="bi bi-send"></i>
+                        <span>Publicar</span>
+                    </button>
+                    <button id="reset-button" class="action-button" type="button">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        <span>Reset</span>
+                    </button>
+                    <a class="action-button" href="/history/">
+                        <i class="bi bi-clock-history"></i>
+                        <span>Historial</span>
+                    </a>
+                    <div class="admin-navbar__user">
+                        <button id="user-menu-button" class="user-menu-button" type="button" aria-label="Menú de usuario" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                        <section id="session-card" class="user-menu hidden">
+                            <div class="user-menu__header">
+                                <div class="user-menu__name-wrap">
+                                    <div id="session-user" class="user-menu__name"></div>
+                                </div>
+                            </div>
+                            <div class="user-menu__actions">
+                                <button id="language-button" class="user-menu__item" type="button" aria-pressed="false">
+                                    <span class="user-menu__item-icon"><i class="bi bi-translate"></i></span>
+                                    <span class="user-menu__item-label">Idioma</span>
+                                    <span id="language-switch" class="user-menu__switch" aria-hidden="true">
+                                        <span class="user-menu__switch-option user-menu__switch-option--active">es</span>
+                                        <span class="user-menu__switch-option">en</span>
+                                    </span>
+                                </button>
+                                <button id="logout-button" class="user-menu__item user-menu__item--danger" type="button">
+                                    <span class="user-menu__item-icon"><i class="bi bi-box-arrow-right"></i></span>
+                                    <span>Cerrar sesión</span>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <section id="access-denied" class="panel hidden">
+                <h1 class="panel-title">Acceso denegado</h1>
+                <p class="admin-muted">Tu usuario está autenticado, pero no existe en <code>admins/{uid}</code>.</p>
+            </section>
+
+            <section id="admin-app" class="hidden">
+                <div id="content-grid" class="content-grid">
+                    <section id="editor-panel" class="editor-panel">
+                        <div class="editor-panel__header">
+                            <div class="editor-panel__header-main">
+                                <label class="editor-search" aria-label="Buscar campos">
+                                    <i class="bi bi-search"></i>
+                                    <input id="editor-search-input" type="search" placeholder="Buscar" autocomplete="off">
+                                </label>
+                            </div>
+                            <button id="editor-toggle-button" class="button editor-toggle-button" type="button" aria-expanded="true" aria-label="Colapsar editor">
+                                <i class="bi bi-layout-sidebar-inset"></i>
+                            </button>
+                        </div>
+                        <div id="editor-panel-body" class="editor-panel__body">
+                            <div id="form-root" class="form-root"></div>
+                        </div>
+                    </section>
+
+                    <section class="side-column">
+                        <section class="preview-panel">
+                            <div class="preview-panel__header">
+                                <h2 class="panel-title">Preview</h2>
+                                <div class="preview-panel__status">
+                                    <div id="status-badge" class="status-badge">Sin guardar</div>
+                                </div>
+                            </div>
+                            <p id="action-message" class="status-text preview-status-text"></p>
+                            <iframe id="preview-frame" class="preview-frame" src="preview.html" title="Preview del sitio"></iframe>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+    <script type="module" src="js/admin-main.js"></script>
+</body>
+
+</html>

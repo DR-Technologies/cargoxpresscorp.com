@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "sitePublished": {
+      "current": {
+        ".read": true,
+        ".write": "auth != null && root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "siteDraft": {
+      "current": {
+        ".read": "auth != null && root.child('admins/' + auth.uid).val() === true",
+        ".write": "auth != null && root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "siteHistory": {
+      ".read": "auth != null && root.child('admins/' + auth.uid).val() === true",
+      "$historyId": {
+        ".write": "auth != null && root.child('admins/' + auth.uid).val() === true"
+      }
+    },
+    "admins": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false
+      }
+    },
+    ".read": false,
+    ".write": false
+  }
+}
